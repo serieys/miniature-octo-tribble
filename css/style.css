@@ -1,0 +1,102 @@
+body {
+    margin-top: 65px;
+}
+
+* {
+    font: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+
+#title {
+    color: #00113d;
+    text-align: center;
+    font-size: 4.75em;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 600;
+}
+
+.input {
+    border-radius: 3px;
+    border: 1px solid rgb(0, 0, 0);
+    color: #333;
+    font-family: inherit;
+    font-size: 17px;
+    height: 20px;
+    line-height: 20px;
+    outline: none;
+    padding: 25px;
+    margin: 0 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.searchSection {
+    display: flex;
+    align-items: center;
+    margin: 30px auto;
+}
+
+.button {
+    border-radius: 3px;
+    color: #4e595d;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    background: #73cf42;
+    color: #fff;
+    height: auto;
+    margin-left: 10px;
+    padding: 10px 20px;
+    width: auto;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button:hover {
+    background: #82d456;
+}
+
+#searchText {
+    font-size: 20px;
+}
+
+.venueInformation {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.venueName {
+    color: #f94878;
+    font-size: 2em;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 600;
+}
+
+.venueLocation {
+    font-style: italic;
+    color: #0732a2;
+    font-weight: 600;
+}
+
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.alert:hover {
+    background-color: #e65146;
+}
+
+.closebtn:hover {
+    color: black;
+}

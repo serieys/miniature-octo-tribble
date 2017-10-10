@@ -1,0 +1,32 @@
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>myApp</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="container">
+        <h1 id="title">Search for venues !</h1>
+        <div ng-controller="venuesController as $ctrl" class="content">
+            <div class="searchSection">
+                    <span id="searchText">Search venues near </span><input class="input" type="text" ng-model="$ctrl.city" />
+                <button ng-click="$ctrl.searchCity()" class="button">Search!</button>
+                <div class="alert" ng-bind="$ctrl.error" ng-if="$ctrl.error" ng-click="$ctrl.error = false">
+                </div>
+            </div>
+            <div class="venueInformation" ng-repeat="element in $ctrl.data">
+                <span class="venueName">{{element.name}}</span>
+                <span class="venueLocation">{{element.location.city}}, {{element.location.country}}</span>
+                <span class="venueCategoryText">Categories:</span>
+                <ul classs="venueCategoryList" ng-repeat="category in element.categories">
+                    <li class="venueCategoryName">{{category.name}}</li>
+                </ul>
+        </div>
+        </div>
+        <script src = "js/libs/angular.min.js"></script>
+        <script src = "app/app.js"></script>
+        <script src="app/controllers/venuesController.js"></script>
+        <script src = "app/services/venuesService.js"></script>
+    </body>
+</html>
